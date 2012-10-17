@@ -24,3 +24,8 @@ syntax on
 
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
+
+" Setup tabbing.
+set expandtab
+set ts=4
+set sw=4

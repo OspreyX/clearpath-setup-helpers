@@ -1,3 +1,9 @@
+clearpath-setup-helpers (0.2) precise; urgency=low
+
+  * Add basic .vimrc and .screenrc
+
+ -- Mike Purvis (Launchpad) <mpurvis@clearpathrobotics.com>  Wed, 17 Oct 2012 11:02:08 -0400
+
 clearpath-setup-helpers (0.1) precise; urgency=low
 
   * Initial release. 
