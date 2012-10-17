@@ -1,9 +1,15 @@
-#!/bin/sh
+#!/bin/bash
 
-echo << 'EOF' >> /etc/skel/.bashrc
-source $${HOME}/ros/setup.bash
+if ! grep -Fq "ros/setup.bash" /etc/skel/.bashrc; then
+echo "Added ros setup.bash to /etc/skel/.bashrc"
+cat <<EOF >> /etc/skel/.bashrc
+source \${HOME}/ros/setup.bash
 EOF
+fi
 
-echo << 'EOF' >> /etc/skel/.profile
-if [ $(hostname) -eq "cpr-unassigned" ]; then name; fi
+if ! grep -Fq "cpr-unassigned" /etc/skel/.profile; then
+echo "Added startup name check to /etc/skel/.profile"
+cat <<EOF >> /etc/skel/.profile
+if [ \$(hostname) -eq "cpr-unassigned" ]; then name; fi
 EOF
+fi
