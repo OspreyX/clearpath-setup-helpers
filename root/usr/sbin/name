@@ -1,5 +1,22 @@
 #!/bin/bash
 
-echo "Please enter some input: "
-read input_variable
-echo "You entered: $input_variable"
+CURRENT_NAME=$(hostname)
+if [ $# -eq 1 ]; then
+  NEW_NAME=$1
+else
+  echo "Please enter a new name for $CURRENT_NAME: "
+  read NEW_NAME
+  if [ -z "$NEW_NAME" ]; then
+    echo "Nothing entered, no change."
+    exit 1
+  fi
+fi
+
+echo "Changing name $CURRENT_NAME to $NEW_NAME."
+
+sudo sed -i 's/$CURRENT_NAME/$NEW_NAME/g' /etc/host*
+sudo sed -i 's/$CURRENT_NAME/$NEW_NAME/g' /etc/wicd/wireless-settings.conf
+
+echo "Initiating system restart."
+
+sudo shutdown -r now
