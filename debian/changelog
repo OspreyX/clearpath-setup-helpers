@@ -1,5 +1,5 @@
-clearpath-grubfix (0.1) precise; urgency=low
+clearpath-setup-helpers (0.1) precise; urgency=low
 
   * Initial release. 
 
- -- Mike Purvis (Launchpad) <mpurvis@clearpathrobotics.com>  Tue, 16 Oct 2012 22:22:57 -0400
+ -- Mike Purvis (Launchpad) <mpurvis@clearpathrobotics.com>  Tue, 16 Oct 2012 23:27:57 -0400

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo << 'EOF' >> /etc/skel/.bashrc
+source $${HOME}/ros/setup.bash
+EOF
+
+echo << 'EOF' >> /etc/skel/.profile
+if [ $(hostname) -eq "cpr-unassigned" ]; then name; fi
+EOF
