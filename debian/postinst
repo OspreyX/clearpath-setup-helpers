@@ -10,6 +10,6 @@ fi
 if ! grep -Fq "cpr-unassigned" /etc/skel/.profile; then
 echo "Added startup name check to /etc/skel/.profile"
 cat <<EOF >> /etc/skel/.profile
-if [ \$(hostname) -eq "cpr-unassigned" ]; then name; fi
+if [ \$(hostname) == "cpr-unassigned" ]; then name; fi
 EOF
 fi

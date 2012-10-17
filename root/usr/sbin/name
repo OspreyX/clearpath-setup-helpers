@@ -14,9 +14,10 @@ fi
 
 echo "Changing name $CURRENT_NAME to $NEW_NAME."
 
-sudo sed -i 's/$CURRENT_NAME/$NEW_NAME/g' /etc/host*
-sudo sed -i 's/$CURRENT_NAME/$NEW_NAME/g' /etc/wicd/wireless-settings.conf
+sudo sed -i "s/$CURRENT_NAME/$NEW_NAME/g" /etc/host*
+sudo sed -i "s/$CURRENT_NAME/$NEW_NAME/g" /etc/wicd/wireless-settings.conf
 
-echo "Initiating system restart."
+echo "Initiating system restart to complete name change."
+sleep 2
 
 sudo shutdown -r now
