@@ -1,0 +1,5 @@
+The Debian Package clearpath-grubfix
+----------------------------
+
+Clearpath package which eliminates grub timeout error on bad boots. Links a
+script in /etc/rcS.d which removes itself after one run.

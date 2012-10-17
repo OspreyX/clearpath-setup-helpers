@@ -1,0 +1,15 @@
+--- 00_header.orig	2012-10-16 15:32:29.788000025 -0400
++++ 00_header	2012-10-16 15:32:21.751999990 -0400
+@@ -232,11 +232,7 @@
+ make_timeout ()
+ {
+     cat << EOF
+-if [ "\${recordfail}" = 1 ]; then
+-  set timeout=-1
+-else
+-  set timeout=${2}
+-fi
++  set timeout=0
+ EOF
+ }
+ 

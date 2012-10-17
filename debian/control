@@ -1,0 +1,14 @@
+Source: clearpath-grubfix
+Section: devel
+Priority: extra
+Maintainer: Mike Purvis <mpurvis@clearpathrobotics.com>
+Build-Depends: debhelper (>= 8.0.0), cdbs
+Standards-Version: 3.9.2
+Homepage: https://github.com/clearpathrobotics/clearpath-network
+#Vcs-Git: git://git.debian.org/collab-maint/backgrounds.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/backgrounds.git;a=summary
+
+Package: clearpath-grubfix
+Architecture: all
+Depends: ${misc:Depends}
+Description: Clearpath Robotics GRUB timeout fix.
